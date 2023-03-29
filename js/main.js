@@ -1,25 +1,29 @@
-
-const kmprice = 0.21;
 let km = prompt("enter the number of kilometers to travel:");
-let IsKmANumber = !isNaN(km);
-let balance = km * kmprice 
-km = parseInt(km);
-
-
 let age = prompt("enter your age:");
-let IsAgeANumber = !isNaN(age);
-age = parseInt(age);
 
+
+km = parseInt(km);
+age = parseInt(age);
+let IsKmANumber = !isNaN(km);
+let IsAgeANumber = !isNaN(age);
+
+let kmprice = 0.21;
+let balance = km * kmprice;
+
+consol.log("Price to pay"+ balance);
+
+let discount65 = balance / 100 * 60
+let discountminor = balance / 100 * 80
 
 if (age > 65) {
-    console.log((balance / 100) * 60); 
-    document.getElementById("balance").innerHTML = "your ticket price is" + ((balance.toFixed(1) / 100) * 60);
+    console.log("your special price is:" + discount65); 
+    document.getElementById("discount65").innerHTML = discount65.toFixed(2)+"euro";
   } else if (eta < 18) {
-    console.log((balance / 100) * 80); 
-    document.getElementById("balance").innerHTML = "your ticket price is" + ((balance.toFixed(1) / 100) * 80);
+    console.log("your special price is:" + discountminor); 
+    document.getElementById("discountminor").innerHTML = discountminor.toFixed(2)+"euro";
   } else {
     console.log(balance);
-    document.getElementById("balance").innerHTML = "your ticket price is" + ((balance.toFixed(1) / 100) + "euro");
+    document.getElementById("balance").innerHTML = "your ticket price is" + balance.toFixed(2)+"euro";
   }
 
 
