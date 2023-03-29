@@ -12,25 +12,18 @@ age = parseInt(age);
 
 
 if (age > 65) {
-    balance = balance * 0.8; 
+    console.log((balance / 100) * 60); 
+    document.getElementById("balance").innerHTML = "your ticket price is" + ((balance.toFixed(1) / 100) * 60);
   } else if (eta < 18) {
-    balance = balance * 0.6; 
+    console.log((balance / 100) * 80); 
+    document.getElementById("balance").innerHTML = "your ticket price is" + ((balance.toFixed(1) / 100) * 80);
   } else {
-    balance == balance 
+    console.log(balance);
+    document.getElementById("balance").innerHTML = "your ticket price is" + ((balance.toFixed(1) / 100) + "euro");
   }
 
-  let ticketprice = `
-Price to pay:
-> ${ticketprice}$
 
----------------------------------------------
-`;
 
-console.log(ticketprice);
-document.getElementById("finalprice").innerHTML = ticketprice;
-  
-
-  alert("Ticketprice: " + ticketprice.toFixed(2) + " euro");
 
 
 
